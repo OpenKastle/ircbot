@@ -52,7 +52,7 @@ bool Connection::Connect(const std::string& server,
     // Use the TCP protocol
     hints.ai_protocol = IPPROTO_TCP;
 
-    int connectionResult = INT_MAX;
+    int connectionResult = std::numeric_limits<int>::max();
     int connectionAttempt = 0;
     while (connectionResult != 0)
     {
